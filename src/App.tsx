@@ -6,19 +6,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>QR Code handler</p>
       </header>
+
+      <div className='QR-Section'>
+        <button className='QR-Button'>Generate QR</button>
+        <button className='QR-Button'>Scan QR</button>
+      </div>
     </div>
   );
 }
