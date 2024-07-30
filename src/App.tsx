@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import QRScanner from './components/qr-scanner';
 import QRGenerator from './components/qr-generator';
@@ -21,8 +20,8 @@ function App() {
       </header>
 
       <div className='QR-Section'>
-        <button className='QR-Button' onClick={() => setMode(Mode.Generate)}>Generate QR</button>
-        <button className='QR-Button' onClick={() => setMode(Mode.Scan)}>Scan QR</button>
+        <button className='QR-Button' onClick={() => setMode(Mode.Generate)}>Generator</button>
+        <button className='QR-Button' onClick={() => setMode(Mode.Scan)}>Scanner</button>
       </div>
 
       {
