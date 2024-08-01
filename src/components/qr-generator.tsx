@@ -25,7 +25,7 @@ function QRGenerator() {
                 <input
                     type="text"
                     value={text}
-                    style={{height: '32px', fontSize: '14px'}}
+                    style={{height: '32px', fontSize: '14px', width: '50%'}}
                     onChange={e => setText(e.target.value)}
                 />
             </div>
