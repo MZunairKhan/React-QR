@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from 'react';
+import { Fragment, useState } from 'react';
 import QRCode from "react-qr-code";
+import { saveSvg } from '../utils';
 
 function QRGenerator() {
 
@@ -9,6 +10,10 @@ function QRGenerator() {
     const updateQR = () => {
         setValue('');
         setValue(text);
+    }
+    
+    const getImage = async () => {
+        saveSvg()
     }
 
     return (
@@ -29,13 +34,20 @@ function QRGenerator() {
                 value !== '' &&
                 <div style={{ height: "auto", margin: "0 auto", maxWidth: 256, width: "100%"}}>
                     <QRCode
+                        id="qrcode"
                         size={256}
                         value={value}
                         viewBox={`0 0 256 256`}
                         style={{ height: "auto", maxWidth: "100%", width: "100%"}}
                     />
+                    <button style={{marginTop: '10px'}} onClick={() => getImage()}>
+                        Download Code
+                    </button>
                 </div>
             }
+
+            <canvas style={{display: 'none'}} id="canvas"></canvas>
+            <img  style={{display: 'none'}} id="img01" />
         </Fragment>
     );
 }

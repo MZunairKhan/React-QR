@@ -16,13 +16,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>QR Code handler</p>
+        <p className='Title'>QR Code handler</p>
+
+        <div className='QR-Section'>
+          <button className='QR-Button' onClick={() => setMode(Mode.Generate)}>Generator</button>
+          <button className='QR-Button' onClick={() => setMode(Mode.Scan)}>Scanner</button>
+        </div>
       </header>
 
-      <div className='QR-Section'>
-        <button className='QR-Button' onClick={() => setMode(Mode.Generate)}>Generator</button>
-        <button className='QR-Button' onClick={() => setMode(Mode.Scan)}>Scanner</button>
-      </div>
 
       {
         mode === Mode.Scan && 

@@ -14,31 +14,58 @@ button {
   min-height: 5vh;
   min-width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.Title {
+  padding-left: 15px;
+}
+
 .QR-Section {
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .QR-Button {
-  padding: 20px 10px;
-  font-size: 24px;
+  padding: 16px 8px;
+  font-size: 20px;
   color: #ffffff;
   background-color: #4242fc;
 }
 
 .QR-Button:hover {
   background-color: #1212ca;
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    min-height: 5vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-bottom: 10px;
+    align-items: stretch;
+  }
+  
+  .QR-Section {
+    width: auto;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
