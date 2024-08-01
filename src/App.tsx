@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import QRScanner from './components/qr-scanner';
-import QRGenerator from './components/qr-generator';
+import { QRScanner } from './components/qr-scanner';
+import { QRGenerator } from './components/qr-generator';
 
 enum Mode {
   'None',

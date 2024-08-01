@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import QRCode from "react-qr-code";
 import { saveSvg } from '../utils';
 
-function QRGenerator() {
+export const QRGenerator = () => {
 
     const [text, setText] = useState<string>('');
     const [value, setValue] = useState<string>('');
@@ -51,5 +51,3 @@ function QRGenerator() {
         </Fragment>
     );
 }
-
-export default QRGenerator;

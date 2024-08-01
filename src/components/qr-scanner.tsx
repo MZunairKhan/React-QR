@@ -1,12 +1,23 @@
+import { useState } from "react";
+import { useZxing } from "react-zxing";
 
-import React from 'react';
+export const QRScanner = () => {
 
-function QRScanner() {
+  const [result, setResult] = useState("");
+  
+  const { ref } = useZxing({
+    onDecodeResult(result) {
+      setResult(result.getText());
+    },
+  });
+
   return (
-    <div>
-        QR Scanner
-    </div>
+    <>
+      <video ref={ref} />
+      <p>
+        <span>Last result: </span>
+        <span>{result}</span>
+      </p>
+    </>
   );
-}
-
-export default QRScanner;
+};
